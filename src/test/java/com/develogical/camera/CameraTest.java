@@ -19,4 +19,9 @@ public class CameraTest {
         verify(sensor).powerUp();
     }
 
+    @Test
+    public void switchingTheCameraOffPowersDownTheSensor() {
+        myCamera.powerOff();
+        verify(sensor).powerDown();
+    }
 }
